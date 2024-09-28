@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Recruit</title>
+    <link rel="icon" type="image/x-icon" href="ByteMinds.ico">
+    <style type="text/css">
+		*{
+			text-decoration: none;
+		}
+
+        body{
+            /* Background image styles */
+            background-image: url('../images/final.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            margin: 0;
+        }
+
+        #paragraph{
+            padding-right: 12px;
+            padding-left: 12px; 
+            text-align: justify;
+        }
+
+        .row{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box {
+            width: 1500px;
+            border: 5px solid #fff;
+            height: 200px;
+            text-align: center;
+            font-size: 15px;
+            border-radius: 12px;
+            transition: 1s;
+            justify-content: space-evenly;
+        }
+/*
+        .box #box1{
+            padding: 20px;
+            text-align: center;
+        }
+
+        .box p{
+            justify-content: left;
+        } */
+        /*
+        #box1{
+            background-image: linear-gradient(rgb(236, 111, 111),rgb(206, 123, 46));
+        }
+
+        #box2{
+            background-image: linear-gradient(rgb(236, 111, 111),rgb(206, 123, 46));
+        }
+
+        #box3{
+            background-image: linear-gradient(rgb(236, 111, 111),rgb(206, 123, 46));
+        }
+
+        #box1:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        #box2:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        #box3:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        */
+        #log, #reg, #mathi, #pre {
+            /*background: #007bff; / Background color */
+            color: #fff; 
+            padding: 10px 2px;
+            border-radius: 15px;
+            margin-left: 10px; 
+            transition: background 0.3s, transform 0.3s; 
+        }
+
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            
+        }
+
+        /* Hero section styles */
+        .hero {
+            /*background: rgba(0, 123, 255, 0.9); / Adding a semi-transparent background */
+            color: #0f0202;
+            
+            text-align: center;
+            
+        }
+
+        .hero h2 {
+            color: rgb(255, 255, 255);
+            text-shadow: 0 0 3px #000000;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contain{
+            margin-top: 100px;
+        }
+        /*
+        .hero p {
+            font-size: 1.2em;
+            color: aqua;
+            margin-bottom: 30px;
+            padding: 10px;
+            margin: 200px;
+            margin-top: 0px;
+            background-image: linear-gradient(rgb(57, 70, 143), rgb(199, 36, 185));
+        }*/
+
+        .fe{
+            padding: 20px;
+        }
+
+        .fe h2{
+                color: rgb(255, 255, 255);
+                text-shadow: 0 0 3px #000000;
+                font-size: 2.5em;
+                margin-bottom: 20px;
+                text-align: center;
+        }
+
+        .fe h3{
+            text-shadow: 2px 2white;
+            color: white;
+        }
+
+        .fe p{
+            color: #fff;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            justify-content:space-evenly;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        /* Features section styles */
+        #features {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        #features h2 {
+            font-size: 2em;
+            margin-top: 2px;
+        }
+
+        .feature p {
+            font-size: 1.1em;
+        }
+        /* Center align text in the paragraph */
+        #center-text {
+            text-align: justify;
+            text-shadow: #000000;
+            justify-content: space-evenly;
+        }
+
+        .empty{
+            padding: 50px 20px;
+        }
+        /* About section styles */
+        #about {
+            padding-bottom: 10px;
+            padding-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #about h2{
+            color: rgb(255, 255, 255);
+            text-shadow: 0 0 3px #000000;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #about p {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+        }
+
+        /* Footer styles */
+        footer {
+            background-image: linear-gradient(rgb(43, 43, 48),rgb(49, 80, 80));
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+		.navbar{
+			background: rgb(53, 47, 48); font-family: calibri; padding-right: 15px;padding-left: 15px;
+            position: fixed; top: 0; width: 98%; z-index: 100;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+		
+		.navdiv{
+			display: flex; align-items: center; justify-content: space-between;
+		}
+		.logo a{
+            float: inline-start;
+			font-size: 35px; font-weight: 600; color: white; text-shadow: 2px 2px 5px black;
+		}
+
+        .logo img{
+            width: 60px; height: 60px;
+            
+        }
+
+		li{
+			list-style: none; display: inline-block; padding: 10px;
+		}
+		li a{
+			color: white; font-size: 18px; font-weight: bold; margin-right: 25px; width:20px; padding: 10px; text-shadow: 2px 2px 5px black;
+		}
+		button{
+			background-color: rgb(0, 0, 0); transition: 0.5s; margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+		}
+		button a{
+			color: white; font-weight: bold; font-size: 15px;
+		}
+        button:hover{
+            background-color: rgb(83, 81, 81);
+            transform: scale(1.1);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+	</style>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <img src="..\images\ByteMinds.png" >
+                <a href="home.html">NextGen Recruit -</a>
+            </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>  
+                <li><a href="#feat">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <button><a href="login.html">Login</a></button>
+                <button><a href="register.html">Register</a></button>
+            </ul>
+        </div>
+    </nav> </header>
+
+    <section class="hero">
+        <div class="contain">
+            <h2>Find Your Next Great Talent Effortlessly</h2>
+            <p>Our NextGen Recruit uses advanced AI to help you find the best candidates faster and smarter.</p>
+        </div>
+    </section>
+            <div class="fe" id="feat">
+                <h2>Features</h2>
+                <div class="row">
+                <div class="box" id="box1">
+                    <h3>AI-Powered Search</h3>
+                    <p id="paragraph">
+                        Our NextGen Recruitlication leverages cutting-edge artificial intelligence to streamline your hiring process. The AI-powered search functionality enables recruiters to quickly find the most suitable candidates by analyzing resumes and profiles against job requirements.
+                    </p>
+                </div>
+                <div class="box" id="box2">
+                    <h3>Seamless Integration</h3>
+                    <p id="paragraph">Designed with flexibility in mind, our application seamlessly integrates with existing HR systems and tools. Whether you use an Applicant Tracking System (ATS), HR management software, or other recruitment platforms, our NextGen Recruitlication can connect and synchronize data effortlessly.</p>
+                </div>
+                <div class="box" id="box3">
+                    <h3>Advanced Analytics</h3>
+                    <p id="paragraph">Make informed decisions with our advanced analytics features. The application offers detailed insights into various aspects of the recruitment process, such as candidate sourcing, application trends, and hiring metrics. With customizable dashboards and reports, you can track key performance indicators, identify bottlenecks, and optimize your recruitment strategy.</p>
+                </div>
+            </div>
+            </div>
+        
+    <section class="empty"></section>
+    
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p id="center-text">
+            The NextGen Recruit is designed to streamline and enhance the recruitment process for both on-campus and off-campus scenarios.Our 
+            goal is to empower HR departments with a comprehensive tool that simplifies job posting, application tracking, interview scheduling, 
+            and communication with candidates. With our software, HR teams can efficiently manage the entire recruitment lifecycle, ensuring that 
+            the best talent is identified and brought on board seamlessly. Our commitment is to provide a user-friendly, effective solution that 
+            meets all the business requirements for modern recruitment challenges.
+        </p>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NextGen Recruit. All rights reserved.</p>
+        </div> 
+    </footer>
+    <script src="../js/scripts.js">
+        
+    </script>
+</body>
+</html>
